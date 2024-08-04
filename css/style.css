@@ -228,8 +228,10 @@ section{
         left: 100%;
         display: flex;
         flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8); /* Fallback */
         backdrop-filter: blur(32px);
         transition: all .6s ease-in-out;
+        z-index: 1000;
     }
     .navlist a{
         display: block;
@@ -239,6 +241,9 @@ section{
     }
     .navlist.open{
         left: 0;
+    }
+    .right-content {
+        display: none; /* Esconde los elementos no necesarios en móviles */
     }
 }
 @media(max-width: 920px){
@@ -287,5 +292,8 @@ section{
         height: 360px;
         width: 360px;
         margin: 0 auto;
+    }
+    .navlist a{
+        font-size: 1.5rem;
     }
 }
